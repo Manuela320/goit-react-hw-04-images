@@ -46,8 +46,8 @@ const App = () => {
     setPage(prevPage => prevPage + 1);
   };
 
-  const openModal = imageUrl => {
-    setSelectedImage(imageUrl);
+  const openModal = imageURL => {
+    setSelectedImage(imageURL);
   };
 
   const closeModal = () => {
@@ -60,7 +60,7 @@ const App = () => {
       <ImageGallery images={images} onImageClick={openModal} />
       {isLoading && <Loader />}
       {images.length > 0 && !isLoading && <Button onClick={loadMoreImages} />}
-      {selectedImage && <Modal imageUrl={selectedImage} onClose={closeModal} />}
+      {selectedImage && <Modal imageURL={selectedImage} onClose={closeModal} />}
     </div>
   );
 };
